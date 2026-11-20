@@ -1,11 +1,11 @@
 import cfg
 import dev
-import dly
 import tip
+import amzi
 
 
 def rx_device(x, y):
-  dly.device(x, y)
+  amzi.device(x, y)
   rx_pbs(x, y)
   return x, y
 
@@ -35,7 +35,7 @@ def rx_pbs(x, y):
 
 
 def chip(x, y):
-  dly.test_chips(x, y)
+  amzi.test_chips(x, y)
   rx_device(x, y + cfg.ch * 11)
   dev.texts(x + 6700, y + 4200, 'RX', 5, 'cc')
 

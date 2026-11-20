@@ -1,12 +1,12 @@
 import cfg
 import dev
-import dly
 import voa
 import tip
+import amzi
 
 
 def tx_device(x, y):
-  dly.device(x, y)
+  amzi.device(x, y)
   tx_voa(x, y)
   return x, y
 
@@ -28,7 +28,7 @@ def tx_voa(x, y):
 
 
 def chip(x, y):
-  dly.test_chips(x, y)
+  amzi.test_chips(x, y)
   tx_device(x, y + cfg.ch * 11)
   dev.texts(x + 3700, y + 4200, 'TX', 5, 'cc')
 
