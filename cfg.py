@@ -1,7 +1,7 @@
 import os
 
 ver = '1.0'
-path = f'../../mask/Wooriro150-{ver}'
+path = f'../../mask/Wrr150-{ver}'
 if not os.path.isdir(path): os.mkdir(path)
 draft = 'draft'
 
