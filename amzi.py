@@ -177,8 +177,8 @@ def test_voa(x, y):
 
 
 def test_chips(x, y):
-  voa.chip(x, y, x + 2000, cfg.lchip)
-  psw.chip(x, y + cfg.ch * 4, x + 3000, cfg.lchip)
+  voa.chip(x, y, x + 2000, 10)
+  psw.chip(x, y + cfg.ch * 4, x + 3000, 10)
   pbs.chip(x, y + cfg.ch * 8, cfg.lchip)
   dev.sline(x, y + cfg.ch * 9, cfg.lchip)
   tip.chip(x, y + cfg.ch * 10, cfg.lchip)
