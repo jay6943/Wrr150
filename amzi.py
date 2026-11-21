@@ -1,8 +1,8 @@
 import cfg
 import dev
-import psw
+import vsw
 import voa
-import pbs
+import pbc
 import tip
 import y2x2
 
@@ -115,7 +115,7 @@ def device(x, y):
   angle, dy = 10, cfg.ch * 2
   dy2x2 = cfg.ch * 0.5 - cfg.s2x2
   x21, _ = dev.sbend(xstart, y + cfg.ch * 5, 30, dy2x2 + dy)
-  x31, y31, y32 = psw.device(x21, y + cfg.ch * 5.5 + dy)
+  x31, y31, y32 = vsw.device(x21, y + cfg.ch * 5.5 + dy)
   x33, y33 = dev.sbend(x31, y32, angle, -dy2x2)
   x34, y34 = dev.bends(x31, y31, 180, 0, 1, 1)
   dev.bends(x21, y31, 5, 0, -1, 1)
@@ -177,11 +177,11 @@ def test_voa(x, y):
 
 
 def test_chips(x, y):
-  voa.chip(x, y, x + 2000, 10)
-  psw.chip(x, y + cfg.ch * 4, x + 3000, 10)
-  pbs.chip(x, y + cfg.ch * 8, cfg.lchip)
+  voa.chip(x, y, x + 2000)
+  vsw.chip(x, y + cfg.ch * 4, x + 3000)
+  pbc.chip(x, y + cfg.ch * 8)
   dev.sline(x, y + cfg.ch * 9, cfg.lchip)
-  tip.chip(x, y + cfg.ch * 10, cfg.lchip)
+  tip.chip(x, y + cfg.ch * 10)
 
 
 if __name__ == '__main__':
